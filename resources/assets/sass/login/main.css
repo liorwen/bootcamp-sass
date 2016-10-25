@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* 幫這個 登入頁面 裝飾一下
+ * 主要練習 mixin 跟 &:hover 的用法
+ */
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro");
+* {
+  box-sizing: border-box; }
+
+/* btn-n btn-p 這個 mixin 命名在更完整點
+ * 如 btn-normal 讓人知道它們的用途
+ * 然後 &:link &:visited 可以改成下面這樣，我後來試的
+ */
+body {
+  background: #48D1CC; }
+
+.container {
+  margin: 20px auto;
+  text-align: center;
+  list-style: none;
+  font-family: "Maven Pro", sans-serif;
+  width: 360px;
+  height: 500px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  box-sizing: border-box; }
+  @media screen and (orientation: landscape) {
+    .container {
+      width: 500px; } }
+
+.title {
+  margin: 20px auto;
+  text-align: center;
+  padding: 5px;
+  font-size: 3em;
+  color: #48D1CC;
+  font-family: "Lobster", cursive; }
+
+.username {
+  width: 79%;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  margin: 0px auto 25px;
+  padding: 10px 12px;
+  font-size: 16px; }
+
+.password {
+  width: 79%;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  margin: 0px auto 25px;
+  padding: 10px 12px;
+  font-size: 16px; }
+
+.login {
+  width: 80%;
+  height: 20%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background-color: #fe8a93;
+  display: block;
+  padding: 10px;
+  margin: 0px auto 25px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.9; }
+  .login:active, .login:hover {
+    opacity: 1;
+    box-shadow: 0 0 0 0; }
+
+.textLine {
+  position: relative;
+  width: 79%;
+  z-index: 0;
+  margin: 0px auto 45px; }
+  .textLine span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    border-bottom: 1px solid #c8c8c8;
+    text-align: left;
+    right: 55%;
+    left: 0;
+    top: 0.6em; }
+  .textLine span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    border-bottom: 1px solid #c8c8c8;
+    text-align: right;
+    left: 55%;
+    right: 0;
+    top: 0.6em; }
+
+.fbLogin {
+  width: 80%;
+  height: 20%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background-color: #527EBF;
+  display: block;
+  padding: 10px;
+  margin: 0px auto 25px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px; }
+  .fbLogin:link, .fbLogin:visited {
+    opacity: 0.9; }
+  .fbLogin:active, .fbLogin:hover {
+    opacity: 1;
+    box-shadow: 0 0 0 0; }
+
+.googleLogin {
+  width: 80%;
+  height: 20%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background-color: #DB4A37;
+  display: block;
+  padding: 10px;
+  margin: 0px auto 25px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px; }
+  .googleLogin:link, .googleLogin:visited {
+    opacity: 0.9; }
+  .googleLogin:active, .googleLogin:hover {
+    opacity: 1;
+    box-shadow: 0 0 0 0; }
+
+/*# sourceMappingURL=main.css.map */
